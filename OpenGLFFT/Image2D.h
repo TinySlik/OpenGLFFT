@@ -22,12 +22,12 @@ public:
     {
         auto img_data = stbi_load(path.data(), &width, &height, &channels, 0);
 
-        using namespace std::string_literals;
+        using namespace std;
         
         if (!img_data)
         {
-            auto err = "Failed to load image at path: "s + path.data();
-            throw std::runtime_error(err);
+            // auto err = "Failed to load image at path: " + path.data();
+            // throw std::runtime_error(err);
         }
 
         data.resize(get_total_size());
